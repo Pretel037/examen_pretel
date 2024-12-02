@@ -6,9 +6,9 @@ CREATE TABLE Autor (
   ano_nacimiento VARCHAR(50),
   sexo VARCHAR(50),
   nombre VARCHAR(50),
-  año_defuncion VARCHAR(50)
+  ano_defuncion VARCHAR(50)
 );
-INSERT INTO Autor (id_autor, pais_origen, año_nacimiento, sexo, nombre, año_defuncion)
+INSERT INTO Autor (id_autor, pais_origen, ano_nacimiento, sexo, nombre, año_defuncion)
 VALUES
 (1,'Peru','1966','hombre','Juan','2020'),
 (2,'Peru','1976','hombre','Felipe','2024'),
