@@ -2,12 +2,12 @@ CREATE SCHEMA IF NOT EXISTS Examen_PRETEL1;
 USE Examen_PRETEL1;
 
 CREATE TABLE autor (
-id INT PRIMARY KEY,
-pais_origen VARCHAR(255),
-año_nacimiento VARCHAR(255),
-sexo VARCHAR(255),
-nombre VARCHAR(255),
-año_defuncion VARCHAR(255)
+  id INT PRIMARY KEY,
+  pais_origen VARCHAR(255),
+  ano_nacimiento VARCHAR(255),
+  sexo VARCHAR(255),
+  nombre VARCHAR(255),
+  año_defuncion VARCHAR(255)
 );
 
 INSERT INTO autor (id_autor, pais_origen, año_nacimiento, sexo, nombre, año_defuncion)
@@ -19,9 +19,9 @@ VALUES
 (5,'Peru','1986','mujer','Jenny','2012')
 
 CREATE TABLE libro (
-id_libro INT PRIMARY KEY,
-titulo VARCHAR(255),
-año_publicacion VARCHAR(255)
+  id_libro INT PRIMARY KEY,
+  titulo VARCHAR(255),
+  año_publicacion VARCHAR(255)
 );
 
 INSERT INTO libro (id_libro, titulo, año_publicacion)
@@ -34,11 +34,11 @@ VALUES
 
 
 CREATE TABLE escribir(
-id_escribir INT PRIMARY KEY,
-id_autor INT,
-id_libro INT,
-FOREIGN KEY (id_autor) REFERENCES autor(Nombre_departamento),
-FOREIGN KEY (id_libro) REFERENCES libro(titulo)
+  id_escribir INT PRIMARY KEY,
+  id_autor INT,
+  id_libro INT,
+  FOREIGN KEY (id_autor) REFERENCES autor(Nombre_departamento),
+  FOREIGN KEY (id_libro) REFERENCES libro(titulo)
 );
 
 
