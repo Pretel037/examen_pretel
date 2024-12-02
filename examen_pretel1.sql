@@ -1,8 +1,8 @@
 CREATE SCHEMA IF NOT EXISTS Examen_PRETEL1;
 USE Examen_PRETEL1;
 
-CREATE TABLE autor(
-id_autor INT PRIMARY KEY,
+CREATE TABLE autor (
+id INT PRIMARY KEY,
 pais_origen VARCHAR(255),
 año_nacimiento VARCHAR(255),
 sexo VARCHAR(255),
@@ -18,13 +18,13 @@ VALUES
 (4,'Peru','1969','hombre','Pedro','2024'),
 (5,'Peru','1986','mujer','Jenny','2012')
 
-CREATE TABLE libro(
+CREATE TABLE libro (
 id_libro INT PRIMARY KEY,
 titulo VARCHAR(255),
 año_publicacion VARCHAR(255)
 );
 
-INSERT INTO autor (id_libro, titulo, año_publicacion)
+INSERT INTO libro (id_libro, titulo, año_publicacion)
 VALUES
 (1,'Machine learning 1','1966'),
 (2,'Deep learning','2000'),
