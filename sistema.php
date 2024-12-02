@@ -16,13 +16,16 @@
     <table class="table table-striped table-responsive">
       <thead>
         <tr>
-          <th>dni</th>
+          <th>pais</th>
+          <th>año</th>
+          <th>sexo</th>
+          <th>nombre</th>
         </tr>
       </thead>
       <tbody>
         <?php
 
-	$servername = "34.132.24.150";
+	$servername = "34.123.5.217";
 $username = "root";
 $password = "123456";
 $dbname = "examen_pretel";
@@ -37,15 +40,17 @@ if ($conn->connect_error) {
     echo "Conexión exitosa a la base de datos MySQL";
 }
 
-// Cerrar conexión
 $conn->close();
 
         
-        $cadenaSQL = "select * from alumno";
+        $cadenaSQL = "select * from autor";
         $resultado = mysqli_query($conn, $cadenaSQL);
 
         while ($fila = mysqli_fetch_object($resultado)) {
-         echo "<tr><td> " .$fila->dni . 
+         echo "<tr><td> " .$fila->pais_origen . 
+	       "<tr><td> " .$fila->año_nacimiento . 
+	       "<tr><td> " .$fila->sexo . 
+	       "<tr><td> " .$fila->nombre . 
                  "</td></tr>";
        }
        ?>
