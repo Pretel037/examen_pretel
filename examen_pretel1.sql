@@ -1,7 +1,7 @@
 CREATE SCHEMA IF NOT EXISTS EXAMEN;
 USE EXAMEN;
 CREATE TABLE Autor (
-  idautor INT  NOT NULL PRIMARY KEY
+  idautor INT  NOT NULL PRIMARY KEY,
   pais_origen VARCHAR(50),
   ano_nacimiento VARCHAR(50),
   sexo VARCHAR(50),
